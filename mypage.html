@@ -1,109 +1,156 @@
 <!name 0.1.html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #467;
-    }
+<title>My Page</title>
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-    }
+<style>
 
-    h1 {
-      text-align: center;
-      font-size: 40px; /* bigger title */
-    }
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#e5e5e5;
+    color:#333;
+}
 
-    .profile {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 60px; /* more space between image and text */
-      margin-top: 30px;
-    }
+/* MAIN WHITE BOX */
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
 
-    .text {
-      flex: 1;
-      font-size: 22px; /* bigger text */
-    }
+/* TITLE */
+h1{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:40px;
+}
 
-    h2 {
-      font-size: 26px; /* bigger section titles */
-    }
+/* LEFT IMAGE + RIGHT TEXT */
+.profile{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
 
-     img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid black;
-    }
+/* BIG LEFT IMAGE */
+.main-image{
+    width:500px;
+    height:600px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
 
+/* TEXT SIDE */
+.text{
+    flex:1;
+    min-width:300px;
+    font-size:24px;
+    line-height:1.6;
+}
 
+h2{
+    margin-top:30px;
+    font-size:32px;
+    color:#444;
+}
 
- .img_games {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid black;
-    }
+/* GAMES */
+.games{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
 
+.game-card{
+    background:#f5f5f5;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    width:140px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
 
+.game-card:hover{
+    transform:scale(1.05);
+}
 
-    ul {
-      padding-left: 20px;
-      font-size: 20px; /* bigger list text */
-    }
+.game-card img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-top:10px;
+}
 
-table {
-   background-color: #bf17bf
-   color: black;
-   
-
-  </style>
+</style>
 </head>
 
 <body>
-  <div class="container">
+
+<div class="container">
+
     <h1>My Page</h1>
 
     <div class="profile">
-      
-      <!-- LEFT SIDE IMAGE -->
-      <img src="https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122.jpg"
 
-      <!-- RIGHT SIDE TEXT -->
-      <div class="text">
-        <p>Hi! I'm 12 years old and I love playing computer games 🎮</p>
+        <!-- LEFT BIG IMAGE -->
+        <img 
+        class="main-image"
+        src="https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122.jpg"
+        alt="Cool Image">
 
-        <h2>About Me</h2>
-        I like space videos,
-        I live on Earth,
-        I like to say 67.</p>
+        <!-- RIGHT TEXT -->
+        <div class="text">
 
-        <h2>My Favorite Games</h2>
+            <p>
+                Hi! I'm 12 years old and I love playing computer games 🎮
+            </p>
 
-    <table>
-        <ul>
-           <td> <li>Roblox</li> <img class="img_games"  src="https://m.media-amazon.com/images/I/21aoUPG3svL.png"> </td>
-         <td> <li>Minecraft</li> <img class="img_games"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Minecraft-creeper-face.svg/1280px-Minecraft-creeper-face.svg.png"> </td>
-         <td> <li>CS2</li> <img class="img_games" src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/730/f75dd04fa12445a8ec43be65fa16ff1b8d2bf82e.jpg"> </td>
-        </ul>
+            <h2>About Me</h2>
 
-       </div>
+            <p>
+                I like space videos,<br>
+                I live on Earth,<br>
+                I like to say 67.
+            </p>
+
+            <h2>My Favorite Games</h2>
+
+            <div class="games">
+
+                <div class="game-card">
+                    <h3>Roblox</h3>
+                    <img src="https://m.media-amazon.com/images/I/21aoUPG3svL.png">
+                </div>
+
+                <div class="game-card">
+                    <h3>Minecraft</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Minecraft-creeper-face.svg/1280px-Minecraft-creeper-face.svg.png">
+                </div>
+
+                <div class="game-card">
+                    <h3>CS2</h3>
+                    <img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/730/f75dd04fa12445a8ec43be65fa16ff1b8d2bf82e.jpg">
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
+</div>
+
 </body>
 </html>
